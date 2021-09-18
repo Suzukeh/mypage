@@ -2,12 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://suzukeh.github.io/mypage/posts/additional_test/</loc>
+    <lastmod>2021-09-18T21:03:00+09:00</lastmod>
+  </url><url>
+    <loc>https://suzukeh.github.io/mypage/posts/</loc>
+    <lastmod>2021-09-18T21:03:00+09:00</lastmod>
+  </url><url>
+    <loc>https://suzukeh.github.io/mypage/</loc>
+    <lastmod>2021-09-18T21:03:00+09:00</lastmod>
+  </url><url>
+    <loc>https://suzukeh.github.io/mypage/posts/my-first-post/</loc>
+    <lastmod>2021-09-18T20:55:22+09:00</lastmod>
+  </url><url>
     <loc>https://suzukeh.github.io/mypage/categories/</loc>
   </url><url>
     <loc>https://suzukeh.github.io/mypage/series/</loc>
   </url><url>
     <loc>https://suzukeh.github.io/mypage/tags/</loc>
-  </url><url>
-    <loc>https://suzukeh.github.io/mypage/</loc>
   </url>
 </urlset>
