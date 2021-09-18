@@ -1,3 +1,70 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseurl = "https://suzukeh.github.io/mypage"
+languageCode = 'ja-jp'
+title = 'すずき、すずけ、Suzuke'
+theme = "papermod"
+canonifyurls = true
+paginate = 6
+publishDir = "docs"
+hasCJKLanguage = true
+enableEmoji = true
+enableGitInfo = true
+
+[params]
+    env = "production"
+    title = 'すずき、すずけ、Suzuke'
+    description = "This is suzuke's page"
+    author = "suzuke"
+    ShowShareButtons = true
+    dateformat = "2006/01/02"
+    defaultTheme = "auto"
+    ShowCodeCopyButtons = true
+    ShowToc = true
+    ShowBreadCrumbs = true
+    ShowPostNavLinks = true
+        [params.assets]
+        favicon = "/static/img/icon.png"
+        favicon16x16 = "/static/img/fab16.png"
+        favicon32x32 = "/static/img/icon32.png"
+        apple_touch_icon = "/static/img/icon.png"
+
+        [params.homeInfoParams]
+        Title = "suzuke(鈴木)のサイト"
+        Content = """
+ここはsuzukeのページです。
+- GitHub Pagesを使ってみたかっただけなので、これ作った段階でほぼやりたいことは終わりました。
+- 果たして更新はあるのか!?　乞うご期待。
+        """
+        [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/Suzukeh"
+
+        [[params.socialIcons]]
+        name = "twitter"
+        url = "https://twitter.com/suzukeh1"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
+
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
+
+[markup.goldmark.renderer]
+unsafe= true
