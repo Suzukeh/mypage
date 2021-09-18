@@ -25,6 +25,7 @@ enableGitInfo = true
     ShowToc = true
     ShowBreadCrumbs = true
     ShowPostNavLinks = true
+    images = ['https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png']
 
         [params.homeInfoParams]
         Title = "suzuke (鈴木) のサイト"

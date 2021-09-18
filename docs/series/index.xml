@@ -4,6 +4,10 @@
     <title>Series on すずき、すずけ、Suzuke</title>
     <link>https://suzukeh.github.io/mypage/series/</link>
     <description>Recent content in Series on すずき、すずけ、Suzuke</description>
+    <image>
+      <url>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</url>
+      <link>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language><atom:link href="https://suzukeh.github.io/mypage/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>

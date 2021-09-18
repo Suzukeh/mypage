@@ -4,6 +4,10 @@
     <title>test on すずき、すずけ、Suzuke</title>
     <link>https://suzukeh.github.io/mypage/tags/test/</link>
     <description>Recent content in test on すずき、すずけ、Suzuke</description>
+    <image>
+      <url>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</url>
+      <link>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sat, 18 Sep 2021 21:03:00 +0900</lastBuildDate><atom:link href="https://suzukeh.github.io/mypage/tags/test/index.xml" rel="self" type="application/rss+xml" />

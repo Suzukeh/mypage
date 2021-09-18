@@ -4,11 +4,15 @@
     <title>すずき、すずけ、Suzuke</title>
     <link>https://suzukeh.github.io/mypage/</link>
     <description>Recent content on すずき、すずけ、Suzuke</description>
+    <image>
+      <url>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</url>
+      <link>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sat, 18 Sep 2021 22:03:07 +0900</lastBuildDate><atom:link href="https://suzukeh.github.io/mypage/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>NIKUEC Converter</title>
+      <title>NIKUECコンバーター</title>
       <link>https://suzukeh.github.io/mypage/posts/nikuec-converter/</link>
       <pubDate>Sat, 18 Sep 2021 22:03:07 +0900</pubDate>
       

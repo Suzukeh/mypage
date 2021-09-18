@@ -1,5 +1,5 @@
 ---
-title: "NIKUEC Converter"
+title: "NIKUECコンバーター"
 date: 2021-09-18T22:03:07+09:00
 draft: false
 ---
