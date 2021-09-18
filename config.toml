@@ -9,6 +9,10 @@ hasCJKLanguage = true
 enableEmoji = true
 enableGitInfo = true
 
+
+[outputs]
+    home = [ "HTML", "RSS", "JSON" ]
+
 [params]
     env = "production"
     title = 'すずき、すずけ、Suzuke'
@@ -21,26 +25,22 @@ enableGitInfo = true
     ShowToc = true
     ShowBreadCrumbs = true
     ShowPostNavLinks = true
-        [params.assets]
-        favicon = "/static/img/icon.png"
-        favicon16x16 = "/static/img/fab16.png"
-        favicon32x32 = "/static/img/icon32.png"
-        apple_touch_icon = "/static/img/icon.png"
 
         [params.homeInfoParams]
-        Title = "suzuke(鈴木)のサイト"
+        Title = "suzuke (鈴木) のサイト"
         Content = """
 ここはsuzukeのページです。
 - GitHub Pagesを使ってみたかっただけなので、これ作った段階でほぼやりたいことは終わりました。
 - 果たして更新はあるのか!?　乞うご期待。
         """
-        [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/Suzukeh"
 
         [[params.socialIcons]]
         name = "twitter"
         url = "https://twitter.com/suzukeh1"
+
+        [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/Suzukeh"
 
 [taxonomies]
     category = "categories"
@@ -68,3 +68,28 @@ disableInlineCSS = true
 
 [markup.goldmark.renderer]
 unsafe= true
+
+
+        [[menu.main]]
+        name = "Archive"
+        url = "archives"
+        weight = 5
+
+        [[menu.main]]
+        identifier = "categories"
+        name = "categories"
+        url = "categories/"
+        weight = 10
+
+        [[menu.main]]
+        identifier = "tags"
+        name = "tags"
+        url = "tags/"
+        weight = 10
+
+        [[menu.main]]
+        identifier = "search"
+        name = "search"
+        url = "search/"
+        weight = 20
+
