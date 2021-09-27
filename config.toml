@@ -43,6 +43,10 @@ enableGitInfo = true
         name = "github"
         url = "https://github.com/Suzukeh"
 
+        [[params.socialIcons]]
+        name = "RSS"
+        url = "index.xml"
+
 [taxonomies]
 
     tag = "tags"
