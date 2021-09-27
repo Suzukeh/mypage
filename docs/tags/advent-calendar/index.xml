@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Advent Calendar on すずき、すずけ、Suzuke</title>
+    <link>https://suzukeh.github.io/mypage/tags/advent-calendar/</link>
+    <description>Recent content in Advent Calendar on すずき、すずけ、Suzuke</description>
+    <image>
+      <url>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</url>
+      <link>https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 18 Sep 2021 22:03:07 +0900</lastBuildDate><atom:link href="https://suzukeh.github.io/mypage/tags/advent-calendar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NIKUECコンバーター</title>
+      <link>https://suzukeh.github.io/mypage/posts/nikuec-converter/</link>
+      <pubDate>Sat, 18 Sep 2021 22:03:07 +0900</pubDate>
+      
+      <guid>https://suzukeh.github.io/mypage/posts/nikuec-converter/</guid>
+      <description>これは自分のNIKUEC ConberterのGitHubから持ってきただけの記事です 誰でもカンタン！ クソコラ拡張機能の作り方 【Chromeウ</description>
+    </item>
+    
+  </channel>
+</rss>
