@@ -44,7 +44,7 @@ enableGitInfo = true
         url = "https://github.com/Suzukeh"
 
 [taxonomies]
-    category = "categories"
+
     tag = "tags"
     series = "series"
 
@@ -76,11 +76,11 @@ unsafe= true
         url = "archives"
         weight = 5
 
-        [[menu.main]]
-        identifier = "categories"
-        name = "categories"
-        url = "categories/"
-        weight = 10
+       #[[menu.main]]
+       #identifier = "categories"
+       #name = "categories"
+       #url = "categories/"
+       #weight = 10
 
         [[menu.main]]
         identifier = "tags"
