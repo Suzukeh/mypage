@@ -2,10 +2,11 @@
 title: "NIKUECコンバーター"
 date: 2021-09-18T22:03:07+09:00
 draft: false
-tags: ["移植","Advent Calendar", "Advent Calendar" ]
+#categories: [""]
+tags: ["Advent Calendar"]
 ---
 
-**これは自分の[NIKUEC ConberterのGitHub](https://github.com/Suzukeh/NIKUEC-Converter)から持ってきただけの記事です**
+**これは自分の[GitHub Wiki](https://github.com/Suzukeh/NIKUEC-Converter)から持ってきただけの記事です**
 
 # 誰でもカンタン！ クソコラ拡張機能の作り方　
 ### 【Chromeウェブストアで[公開されました](https://chrome.google.com/webstore/detail/nikuec%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/gjbgkgkildonmlkggcnenebkeigddkpf)！ 12/17追記】
@@ -260,3 +261,4 @@ NIKUECコンバーターの完成品はこちらです．
 ！！！！！！！！！！！！！うおおおおおお！！！！！！！！！！！！！
 
 ![image](https://user-images.githubusercontent.com/49985092/102389568-a06eb480-4016-11eb-8aa4-340e150f8fe5.png)
+

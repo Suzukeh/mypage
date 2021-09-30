@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>NIKUECコンバーター | すずき、すずけ、Suzuke</title>
+<meta name="keywords" content="Advent Calendar" />
+<meta name="description" content="これは自分のGitHub Wikiから持ってきただけの記事です 誰でもカンタン！ クソコラ拡張機能の作り方 【Chromeウェブストアで公開されまし">
+<meta name="author" content="suzuke">
+<link rel="canonical" href="https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/" />
+<link crossorigin="anonymous" href="https://suzukeh.github.io/mypage/assets/css/stylesheet.min.9f1d947375927e9847272b1f4e9be81336f539e513bf04d52cade31f81cad1af.css" integrity="sha256-nx2Uc3WSfphHJysfTpvoEzb1OeUTvwTVLK3jH4HK0a8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="https://suzukeh.github.io/mypage/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://suzukeh.github.io/mypage/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://suzukeh.github.io/mypage/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://suzukeh.github.io/mypage/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://suzukeh.github.io/mypage/apple-touch-icon.png">
+<link rel="mask-icon" href="https://suzukeh.github.io/mypage/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.88.1" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="NIKUECコンバーター" />
+<meta property="og:description" content="これは自分のGitHub Wikiから持ってきただけの記事です 誰でもカンタン！ クソコラ拡張機能の作り方 【Chromeウェブストアで公開されまし" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/" /><meta property="og:image" content="https://suzukeh.github.io/mypage/104"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-18T22:03:07&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-18T22:03:07&#43;09:00" /><meta property="og:site_name" content="すずき、すずけ、Suzuke" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzukeh.github.io/mypage/104"/>
+
+<meta name="twitter:title" content="NIKUECコンバーター"/>
+<meta name="twitter:description" content="これは自分のGitHub Wikiから持ってきただけの記事です 誰でもカンタン！ クソコラ拡張機能の作り方 【Chromeウェブストアで公開されまし"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://suzukeh.github.io/mypage/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Reprints",
+      "item": "https://suzukeh.github.io/mypage/posts/reprints/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "NIKUECコンバーター",
+      "item": "https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "NIKUECコンバーター",
+  "name": "NIKUECコンバーター",
+  "description": "これは自分のGitHub Wikiから持ってきただけの記事です 誰でもカンタン！ クソコラ拡張機能の作り方 【Chromeウェブストアで公開されまし",
+  "keywords": [
+    "Advent Calendar"
+  ],
+  "articleBody": "これは自分のGitHub Wikiから持ってきただけの記事です\n誰でもカンタン！ クソコラ拡張機能の作り方　 【Chromeウェブストアで公開されました！ 12/17追記】 本記事はUEC Advent Calendar 2020の9日目の記事です。\n前日はニー子くんのカクテルの記事です．まだ18歳の人もいるんですよ！！！\n明日はCra2yPierr0tさんです．予告がすでに強そう． 追記：こちらです．自宅で簡単☆計算加速装置\n誰？ 20生のSuzukeです．ネタっぽいこと以上はできない程度の技術と，ネタにしないと気がすまない残念さを足し合わせたような人間です．\nところで，予定と大きく異なってますね．ちょっとまだ完成してないので別の機会にということでお願いします．\nちなみに結論はこれです．\nイントロ Chrome拡張機能とは そもそも拡張機能ってなんじゃい！という方のためにサクッと説明すると，\n ブラウザに新機能を追加し、ブラウザ環境をパーソナライズできる簡易プログラムです。\n だそうです．「Chrome 拡張機能」で検索したときのChromeウェブストアのディスクリプションに書いてありました．\nほんとうにつくれるの？ コンリテを履修した任意のあなたなら作れます．拡張機能に必要な最低限の内容は\n manifest.jsonとかいう中身はただのテキストベースの設定ファイル chaos.jsみたいな，適当な動作をするJavaScriptのファイル  こんなもんです．まあ実質マニフェストなんてCSSみたいなもんですし(ホントか？)，JavaScriptはコンリテでちょっとやりましたよね．\nもちろんコンリテ履修しただけでは全てを書くことはできません．人生でって書いたの3回ぐらいって人は，いわゆるコピペプログラミングってやつになるでしょう．\n私もそうなりました．\nあなたもそうなりましょう．\nクソコラ拡張機能の作り方 ネタを用意する ある程度鮮度はあったほうがいいかと思いますが，それはこの際置いときましょう．未だに5000兆円コンバーター入れてる私みたいな人間もいますから．とにかくネタを用意してください．\n今回私が用意したのはNIKUECです．MIKUEC2020(ファンメイドミクライブ)においてMCのネタとして登場したパワーワード，それがNIKUECです．\nみく ≒ にく = 焼き肉　！！！MCで焼き肉やるか！！！\nということで，ここからは今回私が制作した「NIKUECコンバーター」を例にとって話していきます．\n機能を考える なにはともあれ，MIKUECのページを眺めてみましょう．\nほうほう．\nこれをNIKUECでイジるにはどうするか，と考えるわけです．先程言及した5000兆円コンバーターですが，これはページの中の「5000兆円」などをいい感じに例のフォントの画像で置き換えてくれる素敵な拡張機能です．これを参考にすれば答えは自ずと見えてきます．\nつまり，ページの内容を\n MIKUEC → NIKUEC ライブ　→ 焼き肉  と置換するわけです．画像のもとの文を見てください．次に，置換した結果を想像しながら読んでみてください．\nめっちゃ面白いですね(圧 Tips: 文字数は揃えたほうが良いでしょう．\n実装の仕方を考える これを実装することを考えていきましょう．まあ置換なんて簡単にかけますよね．私はできません．はい，ググりましょう．\nこんなアホみたいな調べ方でも1ページ目に求める答えが出てきます．「2. 実践編～」ってやつです．このサイトによると\n このプログラムを理解するにはいくつかのことを学ぶ必要があります。\n 正規表現による文字列の操作 HTML の操作 (Document Object Model) 関数の再帰的呼び出し   とのことです．まあ作りたいだけなので，サンプルを脳死でコピーしてください．\n改変する部分は当然「正規表現による文字列の操作」です．\nc.textContent = c.textContent.replace(/です。/g, \"でござるよ。\");\nがサンプルにおける置換を担う部分であることは容易にわかります．正規表現もコンリテのEmacsのあたりでやっているはずです．しかしこのサイトは超親切で，\n 2種類以上の書き換えを行う場合には \"ビールもワインも大好きです\".replace(/ビール|麦酒/, \"🍺\").replace(/ワイン/, \"🍷\") のように数珠つなぎに書くことができます。\n と解説してくれています．恐ろしくわかりやすい説明．\nさて，作りたいのは\n MIKUEC → NIKUEC ライブ　→ 焼き肉  という置換でした．つまり，このようにサンプルを改変すればよいわけです．\nc.textContent = c.textContent.replace(/MIKUEC/g, \"NIKUEC\").replace(/ライブ/g, \"焼き肉\");\nこのJavaScriptは保存しておきましょう．後のために適当なディレクトリを作っておくと楽です．\nNIKUEConverter | nikueconverter.js │ 拡張機能にする JavaScriptで実際に置換する部分はできました．あとはこれをchromeくんに 「お前が見ているのは拡張機能だ」 と教えてやる必要があるわけです．それがmanifest.jsonの役割です．これはさすがにコンリテではやってないので，とりまググりましょう．\nいや待ってください．よく見たらさっきのサイトにありました．完璧だなここ．\nこれはフォーマットだけ使う感じで，各所を変更していきます．どの項目が何を示しているかというのは，ほとんど英単語どおりです．\n{ \"manifest_version\": 2, \"description\" : \"Converting the story about MIKUEC into about NIKUEC.\", \"name\": \"NIKUECコンバーター\", \"short_name\": \"NIKUEConv\", \"version\": \"0.2.9\", \"icons\": { \"16\": \"icon16.png\", \"48\": \"icon48.png\", \"128\": \"icon128.png\" }, \"permissions\": [ \"activeTab\" ], \"content_scripts\": [ { \"matches\": [\"\"], \"js\": [\"nikueconverter.js\"] } ] } ただし，\"manifest_version\": 2,だけは変更しないでください．このファイルの更新とか言う意味ではなく，マニフェストのフォーマット自体のバージョンを示しています．バージョンが2じゃないとインストール時に弾かれます．\nこれも先程のディレクトリに保存しときましょう．\nNIKUEConverter | nikueconverter.js | manifest.json アイコン ちらっとmanifest.jsonに出てきましたが，アイコン画像は\n  128*128 px\n  48*48 px\n  16*16 px\n  を用意しました．アイコンは用意しなくても動作に支障はありません．保存先は同じディレクトリにしました．\nNIKUEConverter | nikueconverter.js | manifest.json | icon128.png | icon48.png | icon16.png ちなみに画像はこれです．\nインストールする 12/17追記　Chromeウェブストアで公開されました．より手軽に試せます． NIKUECコンバーター\nさあようやく念願のインストールです．\n  Chrome拡張機能のページ(chrome://extensions/)を開く\n  右上のデベロッパーモードのトグルをオンにする\n  左上の「パッケージ化されていない拡張機能を読み込む」からNIKUEConverterフォルダを選択して読み込む  遊ぶ インストールできたので，“MIKUEC\"等と書いてあるサイト(まさにMIKUECとか)を開くと冒頭の画像のようになります．ちなみに比較するとこんな感じです．\nありえん面白さを体感したい人向けのリンク NIKUECコンバーターの完成品はこちらです．\nNIKUEC-Converter (GitHub)\nまた，こちらの方々のめっちゃありがたい感想が唐突にシュールになるので，がっかり感を得たい人には特におすすめです．\n  ボカロリスナーは今すぐMIKUECを観ろ！！\n  ファンメイドミクライブ「MIKUEC 2020」を見た\n  終わりに 現在Chromeウェブストアの審査待ちです．いずれはストアに並び，もっと手軽に試せるようになると思います．\n審査通ってNIKUECコンバーターはChromeウェブストアから入れられるようになりました．\n！！！！！！！！！！！！！うおおおおおお！！！！！！！！！！！！！\n",
+  "wordCount" : "3108",
+  "inLanguage": "ja",
+  "datePublished": "2021-09-18T22:03:07+09:00",
+  "dateModified": "2021-09-18T22:03:07+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "suzuke"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "すずき、すずけ、Suzuke",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://suzukeh.github.io/mypage/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://suzukeh.github.io/mypage" accesskey="h" title="すずき、すずけ、Suzuke (Alt + H)">すずき、すずけ、Suzuke</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://suzukeh.github.io/mypage" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://suzukeh.github.io/mypage/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://suzukeh.github.io/mypage/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://suzukeh.github.io/mypage/tags/" title="Tag">
+                    <span>Tag</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://suzukeh.github.io/mypage/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://suzukeh.github.io/mypage">Home</a>&nbsp;»&nbsp;<a href="https://suzukeh.github.io/mypage/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://suzukeh.github.io/mypage/posts/reprints/">Reprints</a></div>
+    <h1 class="post-title">
+      NIKUECコンバーター
+    </h1>
+    <div class="post-meta">2021/09/18&nbsp;·&nbsp;Updated&nbsp;·&nbsp;2021/09/18&nbsp;·&nbsp;suzuke
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e8%aa%b0%e3%81%a7%e3%82%82%e3%82%ab%e3%83%b3%e3%82%bf%e3%83%b3-%e3%82%af%e3%82%bd%e3%82%b3%e3%83%a9%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9" aria-label="誰でもカンタン！ クソコラ拡張機能の作り方　">誰でもカンタン！ クソコラ拡張機能の作り方　</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#chrome%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b9%e3%83%88%e3%82%a2%e3%81%a7%e5%85%ac%e9%96%8b%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9fhttpschromegooglecomwebstoredetailnikuece382b3e383b3e38390e383bce382bfe383bcgjbgkgkildonmlkggcnenebkeigddkpf-1217%e8%bf%bd%e8%a8%98" aria-label="【Chromeウェブストアで公開されました！ 12/17追記】">【Chromeウェブストアで<a href="https://chrome.google.com/webstore/detail/nikuec%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/gjbgkgkildonmlkggcnenebkeigddkpf"  target="_blank" >公開されました</a>！ 12/17追記】</a></li>
+                <li>
+                    <a href="#%e8%aa%b0" aria-label="誰？">誰？</a></li></ul>
+                    
+                <li>
+                    <a href="#%e3%82%a4%e3%83%b3%e3%83%88%e3%83%ad" aria-label="イントロ">イントロ</a><ul>
+                        
+                <li>
+                    <a href="#chrome%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%a8%e3%81%af" aria-label="Chrome拡張機能とは">Chrome拡張機能とは</a></li>
+                <li>
+                    <a href="#%e3%81%bb%e3%82%93%e3%81%a8%e3%81%86%e3%81%ab%e3%81%a4%e3%81%8f%e3%82%8c%e3%82%8b%e3%81%ae" aria-label="ほんとうにつくれるの？">ほんとうにつくれるの？</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%82%af%e3%82%bd%e3%82%b3%e3%83%a9%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9" aria-label="クソコラ拡張機能の作り方">クソコラ拡張機能の作り方</a><ul>
+                        
+                <li>
+                    <a href="#%e3%83%8d%e3%82%bf%e3%82%92%e7%94%a8%e6%84%8f%e3%81%99%e3%82%8b" aria-label="ネタを用意する">ネタを用意する</a></li>
+                <li>
+                    <a href="#%e6%a9%9f%e8%83%bd%e3%82%92%e8%80%83%e3%81%88%e3%82%8b" aria-label="機能を考える">機能を考える</a><ul>
+                        
+                <li>
+                    <a href="#%e3%82%81%e3%81%a3%e3%81%a1%e3%82%83%e9%9d%a2%e7%99%bd%e3%81%84%e3%81%a7%e3%81%99%e3%81%ad%e5%9c%a7" aria-label="めっちゃ面白いですね(圧">めっちゃ面白いですね(圧</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%ae%9f%e8%a3%85%e3%81%ae%e4%bb%95%e6%96%b9%e3%82%92%e8%80%83%e3%81%88%e3%82%8b" aria-label="実装の仕方を考える">実装の仕方を考える</a></li>
+                <li>
+                    <a href="#%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%ab%e3%81%99%e3%82%8b" aria-label="拡張機能にする">拡張機能にする</a><ul>
+                        
+                <li>
+                    <a href="#%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b3" aria-label="アイコン">アイコン</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b" aria-label="インストールする">インストールする</a></li>
+                <li>
+                    <a href="#%e9%81%8a%e3%81%b6" aria-label="遊ぶ">遊ぶ</a><ul>
+                        
+                <li>
+                    <a href="#%e3%81%82%e3%82%8a%e3%81%88%e3%82%93%e9%9d%a2%e7%99%bd%e3%81%95%e3%82%92%e4%bd%93%e6%84%9f%e3%81%97%e3%81%9f%e3%81%84%e4%ba%ba%e5%90%91%e3%81%91%e3%81%ae%e3%83%aa%e3%83%b3%e3%82%af" aria-label="ありえん面白さを体感したい人向けのリンク">ありえん面白さを体感したい人向けのリンク</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e7%b5%82%e3%82%8f%e3%82%8a%e3%81%ab" aria-label="終わりに">終わりに</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><strong>これは自分の<a href="https://github.com/Suzukeh/NIKUEC-Converter"  target="_blank" >GitHub Wiki</a>から持ってきただけの記事です</strong></p>
+<h1 id="誰でもカンタン-クソコラ拡張機能の作り方">誰でもカンタン！ クソコラ拡張機能の作り方　<a hidden class="anchor" aria-hidden="true" href="#誰でもカンタン-クソコラ拡張機能の作り方">#</a></h1>
+<h3 id="chromeウェブストアで公開されましたhttpschromegooglecomwebstoredetailnikuece382b3e383b3e38390e383bce382bfe383bcgjbgkgkildonmlkggcnenebkeigddkpf-1217追記">【Chromeウェブストアで<a href="https://chrome.google.com/webstore/detail/nikuec%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/gjbgkgkildonmlkggcnenebkeigddkpf"  target="_blank" >公開されました</a>！ 12/17追記】<a hidden class="anchor" aria-hidden="true" href="#chromeウェブストアで公開されましたhttpschromegooglecomwebstoredetailnikuece382b3e383b3e38390e383bce382bfe383bcgjbgkgkildonmlkggcnenebkeigddkpf-1217追記">#</a></h3>
+<p>本記事は<a href="https://adventar.org/calendars/5070"  target="_blank" >UEC Advent Calendar 2020</a>の9日目の記事です。</p>
+<p>前日は<a href="https://note.com/notkawaii_neet/n/nb4639211dad5"  target="_blank" >ニー子くんのカクテルの記事</a>です．まだ18歳の人もいるんですよ！！！</p>
+<p>明日はCra2yPierr0tさんです．予告がすでに強そう． <strong>追記</strong>：こちらです．<a href="https://cra2ypierr0t.hatenablog.jp/entry/2020/12/10/023834"  target="_blank" >自宅で簡単☆計算加速装置</a></p>
+<h3 id="誰">誰？<a hidden class="anchor" aria-hidden="true" href="#誰">#</a></h3>
+<p>20生の<a href="https://twitter.com/suzukeh1"  target="_blank" >Suzuke</a>です．ネタっぽいこと以上はできない程度の技術と，ネタにしないと気がすまない残念さを足し合わせたような人間です．</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/101379341-7f5fe280-38f7-11eb-8525-003a7b2b8b6e.png" alt="image"  />
+</p>
+<p>ところで，予定と大きく異なってますね．ちょっとまだ完成してないので別の機会にということでお願いします．</p>
+<p>ちなみに結論はこれです．</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/Suzukeh/NIKUEC-Converter/main/NIKUEC.png" alt="nikuec"  />
+</p>
+<h2 id="イントロ">イントロ<a hidden class="anchor" aria-hidden="true" href="#イントロ">#</a></h2>
+<h3 id="chrome拡張機能とは">Chrome拡張機能とは<a hidden class="anchor" aria-hidden="true" href="#chrome拡張機能とは">#</a></h3>
+<p>そもそも拡張機能ってなんじゃい！という方のためにサクッと説明すると，</p>
+<blockquote>
+<p>ブラウザに新<em>機能</em>を追加し、ブラウザ環境をパーソナライズできる簡易プログラムです。</p>
+</blockquote>
+<p>だそうです．「Chrome 拡張機能」で検索したときのChromeウェブストアのディスクリプションに書いてありました．</p>
+<h3 id="ほんとうにつくれるの">ほんとうにつくれるの？<a hidden class="anchor" aria-hidden="true" href="#ほんとうにつくれるの">#</a></h3>
+<p>コンリテを履修した任意のあなたなら作れます．拡張機能に必要な最低限の内容は</p>
+<ul>
+<li><code>manifest.json</code>とかいう中身はただのテキストベースの設定ファイル</li>
+<li><code>chaos.js</code>みたいな，適当な動作をするJavaScriptのファイル</li>
+</ul>
+<p>こんなもんです．まあ実質マニフェストなんてCSSみたいなもんですし(ホントか？)，JavaScriptはコンリテでちょっとやりましたよね．</p>
+<p>もちろんコンリテ履修しただけでは全てを書くことはできません．人生で<code>&lt;script&gt;</code>って書いたの3回ぐらいって人は，いわゆる<strong>コピペプログラミング</strong>ってやつになるでしょう．</p>
+<p>私もそうなりました．</p>
+<p>あなたもそうなりましょう．</p>
+<h2 id="クソコラ拡張機能の作り方">クソコラ拡張機能の作り方<a hidden class="anchor" aria-hidden="true" href="#クソコラ拡張機能の作り方">#</a></h2>
+<h3 id="ネタを用意する">ネタを用意する<a hidden class="anchor" aria-hidden="true" href="#ネタを用意する">#</a></h3>
+<p>ある程度鮮度はあったほうがいいかと思いますが，それはこの際置いときましょう．未だに<a href="https://chrome.google.com/webstore/detail/5000%E5%85%86%E5%86%86%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/mgaphgebhfgmkahikdhdomnnpelbijmo"  target="_blank" >5000兆円コンバーター</a>入れてる私みたいな人間もいますから．とにかくネタを用意してください．</p>
+<p>今回私が用意したのは<strong>NIKUEC</strong>です．<a href="https://mikuec.com/2020/"  target="_blank" >MIKUEC2020</a>(ファンメイドミクライブ)においてMCのネタとして登場したパワーワード，それが<strong>NIKUEC</strong>です．</p>
+<p>みく ≒ にく = 焼き肉　　　<strong>！！！MCで焼き肉やるか！！！</strong></p>
+<p>ということで，ここからは今回私が制作した「NIKUECコンバーター」を例にとって話していきます．</p>
+<h3 id="機能を考える">機能を考える<a hidden class="anchor" aria-hidden="true" href="#機能を考える">#</a></h3>
+<p>なにはともあれ，<a href="https://mikuec.com/2020/"  target="_blank" >MIKUEC</a>のページを眺めてみましょう．</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/101497693-97466d80-39ae-11eb-9b37-4d252ffecea4.png" alt="image"  />
+</p>
+<p>ほうほう．</p>
+<p>これをNIKUECでイジるにはどうするか，と考えるわけです．先程言及した<a href="https://chrome.google.com/webstore/detail/5000%E5%85%86%E5%86%86%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/mgaphgebhfgmkahikdhdomnnpelbijmo"  target="_blank" >5000兆円コンバーター</a>ですが，これはページの中の「5000兆円」などをいい感じに例のフォントの画像で置き換えてくれる素敵な拡張機能です．これを参考にすれば答えは自ずと見えてきます．</p>
+<p>つまり，ページの内容を</p>
+<ul>
+<li>MIKUEC → NIKUEC</li>
+<li>ライブ　→ 焼き肉</li>
+</ul>
+<p>と置換するわけです．画像のもとの文を見てください．次に，置換した結果を想像しながら読んでみてください．</p>
+<h4 id="めっちゃ面白いですね圧">めっちゃ面白いですね(圧<a hidden class="anchor" aria-hidden="true" href="#めっちゃ面白いですね圧">#</a></h4>
+<p><strong>Tips:</strong> 文字数は揃えたほうが良いでしょう．</p>
+<h3 id="実装の仕方を考える">実装の仕方を考える<a hidden class="anchor" aria-hidden="true" href="#実装の仕方を考える">#</a></h3>
+<p>これを実装することを考えていきましょう．まあ置換なんて簡単にかけますよね．私はできません．はい，ググりましょう．</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/101498988-11c3bd00-39b0-11eb-9964-73c027315efb.png" alt="image"  />
+</p>
+<p>こんなアホみたいな調べ方でも1ページ目に求める答えが出てきます．<a href="http://www2.kobe-u.ac.jp/~tnishida/programming/ChromeExtension-02.html"  target="_blank" >「2. 実践編～」</a>ってやつです．このサイトによると</p>
+<blockquote>
+<p>このプログラムを理解するにはいくつかのことを学ぶ必要があります。</p>
+<ul>
+<li>正規表現による文字列の操作</li>
+<li>HTML の操作 (Document Object Model)</li>
+<li>関数の再帰的呼び出し</li>
+</ul>
+</blockquote>
+<p>とのことです．まあ作りたいだけなので，<a href="http://www2.kobe-u.ac.jp/~tnishida/programming/ChromeExtension-02.html#regexp"  target="_blank" >サンプル</a>を脳死でコピーしてください．</p>
+<p>改変する部分は当然「正規表現による文字列の操作」です．</p>
+<p><code>c.textContent = c.textContent.replace(/です。/g, &quot;でござるよ。&quot;);</code></p>
+<p>がサンプルにおける置換を担う部分であることは容易にわかります．正規表現もコンリテのEmacsのあたりでやっているはずです．しかしこのサイトは超親切で，</p>
+<blockquote>
+<p>2種類以上の書き換えを行う場合には <code>&quot;ビールもワインも大好きです&quot;.replace(/ビール|麦酒/, &quot;🍺&quot;).replace(/ワイン/, &quot;🍷&quot;)</code> のように数珠つなぎに書くことができます。</p>
+</blockquote>
+<p>と解説してくれています．恐ろしくわかりやすい説明．</p>
+<p>さて，作りたいのは</p>
+<ul>
+<li>MIKUEC → NIKUEC</li>
+<li>ライブ　→ 焼き肉</li>
+</ul>
+<p>という置換でした．つまり，このようにサンプルを改変すればよいわけです．</p>
+<p><code>c.textContent = c.textContent.replace(/MIKUEC/g, &quot;NIKUEC&quot;).replace(/ライブ/g, &quot;焼き肉&quot;);</code></p>
+<p>このJavaScriptは保存しておきましょう．後のために適当なディレクトリを作っておくと楽です．</p>
+<pre tabindex="0"><code>NIKUEConverter
+| nikueconverter.js
+│
+</code></pre><h3 id="拡張機能にする">拡張機能にする<a hidden class="anchor" aria-hidden="true" href="#拡張機能にする">#</a></h3>
+<p>JavaScriptで実際に置換する部分はできました．あとはこれをchromeくんに <strong>「お前が見ているのは拡張機能だ」</strong> と教えてやる必要があるわけです．それが<code>manifest.json</code>の役割です．これはさすがにコンリテではやってないので，とりまググりましょう．</p>
+<p>いや待ってください．よく見たら<a href="http://www2.kobe-u.ac.jp/~tnishida/programming/ChromeExtension-02.html#tutorial"  target="_blank" >さっきのサイト</a>にありました．完璧だなここ．</p>
+<p>これはフォーマットだけ使う感じで，各所を変更していきます．どの項目が何を示しているかというのは，ほとんど英単語どおりです．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">2</span>,
+	<span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Converting the story about MIKUEC into about NIKUEC.&#34;</span>,
+	<span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;NIKUECコンバーター&#34;</span>,
+	<span style="color:#f92672">&#34;short_name&#34;</span>: <span style="color:#e6db74">&#34;NIKUEConv&#34;</span>,
+	<span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.9&#34;</span>,
+	<span style="color:#f92672">&#34;icons&#34;</span>: {
+	    <span style="color:#f92672">&#34;16&#34;</span>: <span style="color:#e6db74">&#34;icon16.png&#34;</span>,
+	    <span style="color:#f92672">&#34;48&#34;</span>: <span style="color:#e6db74">&#34;icon48.png&#34;</span>,
+	    <span style="color:#f92672">&#34;128&#34;</span>: <span style="color:#e6db74">&#34;icon128.png&#34;</span>
+	},
+	<span style="color:#f92672">&#34;permissions&#34;</span>: [
+		    <span style="color:#e6db74">&#34;activeTab&#34;</span>
+	],
+	<span style="color:#f92672">&#34;content_scripts&#34;</span>: [
+		{
+		    <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;&lt;all_urls&gt;&#34;</span>],
+		    <span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;nikueconverter.js&#34;</span>]
+		}
+	]
+}
+
+</code></pre></div><p>ただし，<code>&quot;manifest_version&quot;: 2,</code>だけは変更しないでください．このファイルの更新とか言う意味ではなく，マニフェストのフォーマット自体のバージョンを示しています．バージョンが2じゃないとインストール時に弾かれます．</p>
+<p>これも先程のディレクトリに保存しときましょう．</p>
+<pre tabindex="0"><code>NIKUEConverter
+| nikueconverter.js
+| manifest.json
+</code></pre><h4 id="アイコン">アイコン<a hidden class="anchor" aria-hidden="true" href="#アイコン">#</a></h4>
+<p>ちらっと<code>manifest.json</code>に出てきましたが，アイコン画像は</p>
+<ul>
+<li>
+<p>128*128 px</p>
+</li>
+<li>
+<p>48*48 px</p>
+</li>
+<li>
+<p>16*16 px</p>
+</li>
+</ul>
+<p>を用意しました．アイコンは用意しなくても動作に支障はありません．保存先は同じディレクトリにしました．</p>
+<pre tabindex="0"><code>NIKUEConverter
+| nikueconverter.js
+| manifest.json
+| icon128.png
+| icon48.png
+| icon16.png
+</code></pre><p>ちなみに画像はこれです．</p>
+<p><img src="https://raw.githubusercontent.com/Suzukeh/NIKUEC-Converter/main/NIKUEConverter/icon128.png" alt="niku" style="zoom: 200%;" /></p>
+<h3 id="インストールする">インストールする<a hidden class="anchor" aria-hidden="true" href="#インストールする">#</a></h3>
+<p><strong>12/17追記</strong>　Chromeウェブストアで公開されました．より手軽に試せます．
+<a href="https://chrome.google.com/webstore/detail/nikuec%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/gjbgkgkildonmlkggcnenebkeigddkpf"  target="_blank" >NIKUECコンバーター</a></p>
+<p>さあようやく念願のインストールです．</p>
+<ol>
+<li>
+<p>Chrome拡張機能のページ(chrome://extensions/)を開く</p>
+</li>
+<li>
+<p>右上のデベロッパーモードのトグルをオンにする</p>
+</li>
+</ol>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/99900568-8a115980-2cf3-11eb-8390-b760df9d72e4.png" alt="デベロッパーモード"  />
+</p>
+<ol start="3">
+<li>左上の「パッケージ化されていない拡張機能を読み込む」からNIKUEConverterフォルダを選択して読み込む</li>
+</ol>
+<h3 id="遊ぶ">遊ぶ<a hidden class="anchor" aria-hidden="true" href="#遊ぶ">#</a></h3>
+<p>インストールできたので，&ldquo;MIKUEC&quot;等と書いてあるサイト(まさに<a href="https://mikuec.com/2020/"  target="_blank" >MIKUEC</a>とか)を開くと<a href="https://user-images.githubusercontent.com/49985092/99900779-00628b80-2cf5-11eb-8b5b-d9a878cd0dd5.png"  target="_blank" >冒頭の画像</a>のようになります．ちなみに比較するとこんな感じです．</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/99900779-00628b80-2cf5-11eb-8b5b-d9a878cd0dd5.png" alt="比較"  />
+</p>
+<h4 id="ありえん面白さを体感したい人向けのリンク">ありえん面白さを体感したい人向けのリンク<a hidden class="anchor" aria-hidden="true" href="#ありえん面白さを体感したい人向けのリンク">#</a></h4>
+<p>NIKUECコンバーターの完成品はこちらです．</p>
+<p><a href="https://github.com/Suzukeh/NIKUEC-Converter"  target="_blank" >NIKUEC-Converter</a> (GitHub)</p>
+<p>また，こちらの方々のめっちゃありがたい感想が唐突にシュールになるので，がっかり感を得たい人には特におすすめです．</p>
+<ul>
+<li>
+<p><a href="https://note.com/thmkhsnk/n/n14302eaba92f"  target="_blank" >ボカロリスナーは今すぐMIKUECを観ろ！！</a></p>
+</li>
+<li>
+<p><a href="https://nat.hatenadiary.com/entry/2020/11/22/012633"  target="_blank" >ファンメイドミクライブ「MIKUEC 2020」を見た</a></p>
+</li>
+</ul>
+<h2 id="終わりに">終わりに<a hidden class="anchor" aria-hidden="true" href="#終わりに">#</a></h2>
+<p><del>現在Chromeウェブストアの審査待ちです．いずれはストアに並び，もっと手軽に試せるようになると思います．</del></p>
+<p>審査通って<a href="https://chrome.google.com/webstore/detail/nikuec%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC/gjbgkgkildonmlkggcnenebkeigddkpf"  target="_blank" >NIKUECコンバーター</a>はChromeウェブストアから入れられるようになりました．</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/102388962-d52e3c00-4015-11eb-856f-46dcb61e0c81.png" alt="image"  />
+</p>
+<p>！！！！！！！！！！！！！うおおおおおお！！！！！！！！！！！！！</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/49985092/102389568-a06eb480-4016-11eb-8aa4-340e150f8fe5.png" alt="image"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://suzukeh.github.io/mypage/tags/advent-calendar/">Advent Calendar</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://suzukeh.github.io/mypage/posts/my-first-post/">
+    <span class="title">次のページ »</span>
+    <br>
+    <span>test お試し</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NIKUECコンバーター on twitter"
+        href="https://twitter.com/intent/tweet/?text=NIKUEC%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bf%e3%83%bc&amp;url=https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f&amp;hashtags=AdventCalendar">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NIKUECコンバーター on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f&amp;title=NIKUEC%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bf%e3%83%bc&amp;summary=NIKUEC%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bf%e3%83%bc&amp;source=https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NIKUECコンバーター on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f&title=NIKUEC%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bf%e3%83%bc">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NIKUECコンバーター on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NIKUECコンバーター on whatsapp"
+        href="https://api.whatsapp.com/send?text=NIKUEC%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bf%e3%83%bc%20-%20https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NIKUECコンバーター on telegram"
+        href="https://telegram.me/share/url?text=NIKUEC%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bf%e3%83%bc&amp;url=https%3a%2f%2fsuzukeh.github.io%2fmypage%2fposts%2freprints%2fnikuec-converter%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2021 <a href="https://suzukeh.github.io/mypage">すずき、すずけ、Suzuke</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 baseurl = "https://suzukeh.github.io/mypage"
 languageCode = 'ja-jp'
+defaultContentLanguage = "ja"
 title = 'すずき、すずけ、Suzuke'
 theme = "papermod"
 canonifyurls = true
@@ -8,49 +9,51 @@ publishDir = "docs"
 hasCJKLanguage = true
 enableEmoji = true
 enableGitInfo = true
+#SectionPagesMenu = "main"
 
 
 [outputs]
-    home = [ "HTML", "RSS", "JSON" ]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
-    env = "production"
-    title = 'すずき、すずけ、Suzuke'
-    description = "This is suzuke's page"
-    author = "suzuke"
-    ShowShareButtons = true
-    dateformat = "2006/01/02"
-    defaultTheme = "auto"
-    ShowCodeCopyButtons = true
-    ShowToc = true
-    ShowBreadCrumbs = true
-    ShowPostNavLinks = true
-    images = ['https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png']
+env = "production"
+title = 'すずき、すずけ、Suzuke'
+description = "This is suzuke's page"
+author = "suzuke"
+ShowShareButtons = true
+dateformat = "2006/01/02"
+defaultTheme = "auto"
+ShowCodeCopyButtons = true
+ShowToc = true
+ShowBreadCrumbs = true
+ShowPostNavLinks = true
+images = 'https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png'
 
-        [params.homeInfoParams]
-        Title = "suzuke (鈴木) のサイト"
-        Content = """
+
+[params.homeInfoParams]
+Title = "suzuke (鈴木) のサイト"
+Content = """
 ここはsuzukeのページです。
 - GitHub Pagesを使ってみたかっただけなので、これ作った段階でほぼやりたいことは終わりました。
 - 果たして更新はあるのか!?　乞うご期待。
         """
 
-        [[params.socialIcons]]
-        name = "twitter"
-        url = "https://twitter.com/suzukeh1"
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/suzukeh1"
 
-        [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/Suzukeh"
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/Suzukeh"
 
-        [[params.socialIcons]]
-        name = "RSS"
-        url = "index.xml"
+[[params.socialIcons]]
+name = "RSS"
+url = "index.xml"
 
 [taxonomies]
-
-    tag = "tags"
-    series = "series"
+categories = "categories"
+tag = "tags"
+#series = "series"
 
 [privacy.twitter]
 disabled = false
@@ -72,29 +75,37 @@ disableInlineCSS = true
 disableInlineCSS = true
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
 
+[[menu.main]]
+name = "Home"
+url = ""
+weight = 1
 
-        [[menu.main]]
-        name = "Archive"
-        url = "archives"
-        weight = 5
+[[menu.main]]
+name = "About"
+url = "about/"
+weight = 5
 
-       #[[menu.main]]
-       #identifier = "categories"
-       #name = "categories"
-       #url = "categories/"
-       #weight = 10
+[[menu.main]]
+name = "Archive"
+url = "archives"
+weight = 10
 
-        [[menu.main]]
-        identifier = "tags"
-        name = "tags"
-        url = "tags/"
-        weight = 10
+#[[menu.main]]
+#identifier = "categories"
+#name = "categories"
+#url = "categories/"
+#weight = 15
 
-        [[menu.main]]
-        identifier = "search"
-        name = "search"
-        url = "search/"
-        weight = 20
+[[menu.main]]
+identifier = "tags"
+name = "Tag"
+url = "tags/"
+weight = 20
 
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "search/"
+weight = 30
