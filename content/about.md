@@ -14,7 +14,7 @@ hidemeta: true
 
 # 自己紹介
 
-<img src="https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/icon.png" style="width: 25%; border: none; box-shadow:none;transform:rotate(0deg)"/>
+<img src="https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/icon_circ.png" style="width: 25%; border: none; box-shadow:none;transform:rotate(0deg)"/>
 
 調布にある某大学のⅢ類物理工学プログラムの大学生。
 
