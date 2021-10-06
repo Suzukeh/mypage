@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on すずき、すずけ、Suzuke</title>
-    <link>https://suzuke.dev/posts/</link>
-    <description>Recent content in Posts on すずき、すずけ、Suzuke</description>
+    <title>ドメイン on すずき、すずけ、Suzuke</title>
+    <link>https://suzuke.dev/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</link>
+    <description>Recent content in ドメイン on すずき、すずけ、Suzuke</description>
     <image>
       <url>https://suzuke.dev/104</url>
       <link>https://suzuke.dev/104</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 06 Oct 2021 20:43:40 +0900</lastBuildDate><atom:link href="https://suzuke.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Oct 2021 20:43:40 +0900</lastBuildDate><atom:link href="https://suzuke.dev/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ドメインの購入</title>
       <link>https://suzuke.dev/posts/newdomain/</link>
@@ -18,15 +18,6 @@
       
       <guid>https://suzuke.dev/posts/newdomain/</guid>
       <description>devだ！ 何を思ったか suzuke.dev のドメインを購入しました。Google Domainsで1400円/年でした。いずれスライドを全部適当なサイトで管理し</description>
-    </item>
-    
-    <item>
-      <title>test お試し</title>
-      <link>https://suzuke.dev/posts/my-first-post/</link>
-      <pubDate>Wed, 15 Sep 2021 18:10:38 +0900</pubDate>
-      
-      <guid>https://suzuke.dev/posts/my-first-post/</guid>
-      <description>できました！ わーい Y.wav よかったね</description>
     </item>
     
   </channel>

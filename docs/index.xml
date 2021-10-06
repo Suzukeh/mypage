@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 18 Sep 2021 22:03:07 +0900</lastBuildDate><atom:link href="https://suzuke.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Oct 2021 20:43:40 +0900</lastBuildDate><atom:link href="https://suzuke.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ドメインの購入</title>
+      <link>https://suzuke.dev/posts/newdomain/</link>
+      <pubDate>Wed, 06 Oct 2021 20:43:40 +0900</pubDate>
+      
+      <guid>https://suzuke.dev/posts/newdomain/</guid>
+      <description>devだ！ 何を思ったか suzuke.dev のドメインを購入しました。Google Domainsで1400円/年でした。いずれスライドを全部適当なサイトで管理し</description>
+    </item>
+    
     <item>
       <title>NIKUECコンバーター</title>
       <link>https://suzuke.dev/posts/reprints/nikuec-converter/</link>
