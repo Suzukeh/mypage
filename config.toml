@@ -27,7 +27,7 @@ ShowCodeCopyButtons = true
 ShowToc = true
 ShowBreadCrumbs = true
 ShowPostNavLinks = true
-images = 'https://raw.githubusercontent.com/Suzukeh/mypage/main/static/img/card.png'
+images = ["card.png"]
 
 
 [params.homeInfoParams]
