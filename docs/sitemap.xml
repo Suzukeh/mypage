@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://suzukeh.github.io/mypage/tags/advent-calendar/</loc>
+    <loc>https://suzuke.dev/tags/advent-calendar/</loc>
     <lastmod>2021-09-30T17:55:20+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/</loc>
+    <loc>https://suzuke.dev/posts/reprints/nikuec-converter/</loc>
     <lastmod>2021-09-30T17:55:20+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/posts/</loc>
+    <loc>https://suzuke.dev/posts/</loc>
+    <lastmod>2021-09-30T22:26:18+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/tags/</loc>
     <lastmod>2021-09-30T17:55:20+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/tags/</loc>
-    <lastmod>2021-09-30T17:55:20+09:00</lastmod>
+    <loc>https://suzuke.dev/</loc>
+    <lastmod>2021-09-30T22:26:18+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/</loc>
-    <lastmod>2021-09-30T17:55:20+09:00</lastmod>
-  </url><url>
-    <loc>https://suzukeh.github.io/mypage/tags/test/</loc>
+    <loc>https://suzuke.dev/tags/test/</loc>
     <lastmod>2021-09-27T20:44:56+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/posts/my-first-post/</loc>
+    <loc>https://suzuke.dev/posts/my-first-post/</loc>
     <lastmod>2021-09-27T20:44:56+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/about/</loc>
+    <loc>https://suzuke.dev/about/</loc>
     <lastmod>2021-09-30T18:28:04+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/archives/</loc>
+    <loc>https://suzuke.dev/archives/</loc>
     <lastmod>2021-09-18T22:53:38+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/categories/</loc>
+    <loc>https://suzuke.dev/categories/</loc>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/posts/reprints/</loc>
-    <lastmod>2021-09-30T17:55:20+09:00</lastmod>
+    <loc>https://suzuke.dev/posts/reprints/</loc>
+    <lastmod>2021-09-30T22:26:18+09:00</lastmod>
   </url><url>
-    <loc>https://suzukeh.github.io/mypage/search/</loc>
+    <loc>https://suzuke.dev/search/</loc>
     <lastmod>2021-09-18T22:53:38+09:00</lastmod>
   </url>
 </urlset>

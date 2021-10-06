@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>すずき、すずけ、Suzuke</title>
-    <link>https://suzukeh.github.io/mypage/</link>
+    <link>https://suzuke.dev/</link>
     <description>Recent content on すずき、すずけ、Suzuke</description>
     <image>
-      <url>https://suzukeh.github.io/mypage/104</url>
-      <link>https://suzukeh.github.io/mypage/104</link>
+      <url>https://suzuke.dev/104</url>
+      <link>https://suzuke.dev/104</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 18 Sep 2021 22:03:07 +0900</lastBuildDate><atom:link href="https://suzukeh.github.io/mypage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Sep 2021 22:03:07 +0900</lastBuildDate><atom:link href="https://suzuke.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NIKUECコンバーター</title>
-      <link>https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/</link>
+      <link>https://suzuke.dev/posts/reprints/nikuec-converter/</link>
       <pubDate>Sat, 18 Sep 2021 22:03:07 +0900</pubDate>
       
-      <guid>https://suzukeh.github.io/mypage/posts/reprints/nikuec-converter/</guid>
+      <guid>https://suzuke.dev/posts/reprints/nikuec-converter/</guid>
       <description>これは自分のGitHub Wikiから持ってきただけの記事です 誰でもカンタン！ クソコラ拡張機能の作り方 【Chromeウェブストアで公開されまし</description>
     </item>
     
     <item>
       <title>test お試し</title>
-      <link>https://suzukeh.github.io/mypage/posts/my-first-post/</link>
+      <link>https://suzuke.dev/posts/my-first-post/</link>
       <pubDate>Wed, 15 Sep 2021 18:10:38 +0900</pubDate>
       
-      <guid>https://suzukeh.github.io/mypage/posts/my-first-post/</guid>
+      <guid>https://suzuke.dev/posts/my-first-post/</guid>
       <description>できました！ わーい Y.wav よかったね</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://suzukeh.github.io/mypage/about/</link>
+      <link>https://suzuke.dev/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://suzukeh.github.io/mypage/about/</guid>
+      <guid>https://suzuke.dev/about/</guid>
       <description>自己紹介 調布にある某大学のⅢ類物理工学プログラムの大学生。 サークルはVLLと工研に所属しています。 なんと実家も調布なので、調布市から出ない生</description>
     </item>
     
