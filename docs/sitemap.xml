@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://suzuke.dev/posts/diary/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/posts/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/tags/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/tags/vocaloid/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/tags/%E3%83%9E%E3%82%B8%E3%82%AB%E3%83%AB%E3%83%9F%E3%83%A9%E3%82%A4/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
+    <loc>https://suzuke.dev/posts/diary/magicalmirai2021/</loc>
+    <lastmod>2021-11-08T00:57:40+09:00</lastmod>
+  </url><url>
     <loc>https://suzuke.dev/tags/github-pages/</loc>
     <lastmod>2021-10-06T22:31:45+09:00</lastmod>
   </url><url>
     <loc>https://suzuke.dev/tags/google-domains/</loc>
-    <lastmod>2021-10-06T22:31:45+09:00</lastmod>
-  </url><url>
-    <loc>https://suzuke.dev/posts/</loc>
-    <lastmod>2021-10-06T22:31:45+09:00</lastmod>
-  </url><url>
-    <loc>https://suzuke.dev/tags/</loc>
-    <lastmod>2021-10-06T22:31:45+09:00</lastmod>
-  </url><url>
-    <loc>https://suzuke.dev/</loc>
     <lastmod>2021-10-06T22:31:45+09:00</lastmod>
   </url><url>
     <loc>https://suzuke.dev/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</loc>
