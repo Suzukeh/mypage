@@ -1,7 +1,7 @@
 ---
 title: "Wiki、始めました"
 summary: "【UEC Advent Calendar 2021】GCP+Growiで部内Wikiを導入した話"
-date: 2021-12-18T18:30:24+09:00
+date: 2021-12-19
 draft: false
 math: false
 #categories: [""]
