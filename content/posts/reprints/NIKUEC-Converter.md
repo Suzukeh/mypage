@@ -3,7 +3,7 @@ title: "NIKUECコンバーター"
 date: 2021-09-18T22:03:07+09:00
 draft: false
 #categories: [""]
-tags: ["Advent Calendar"]
+tags: ["UEC Advent Calendar"]
 ---
 
 **これは自分の[GitHub Wiki](https://github.com/Suzukeh/NIKUEC-Converter)から持ってきただけの記事です**
