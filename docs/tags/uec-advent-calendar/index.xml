@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UEC Advent Calendar on すずき、すずけ、Suzuke</title>
+    <link>https://suzuke.dev/tags/uec-advent-calendar/</link>
+    <description>Recent content in UEC Advent Calendar on すずき、すずけ、Suzuke</description>
+    <image>
+      <url>https://suzuke.dev/card.png</url>
+      <link>https://suzuke.dev/card.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 18 Dec 2021 18:30:24 +0900</lastBuildDate><atom:link href="https://suzuke.dev/tags/uec-advent-calendar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wiki、始めました</title>
+      <link>https://suzuke.dev/posts/startgrowi/</link>
+      <pubDate>Sat, 18 Dec 2021 18:30:24 +0900</pubDate>
+      
+      <guid>https://suzuke.dev/posts/startgrowi/</guid>
+      <description>【UEC Advent Calendar 2021】GCP+Growiで部内Wikiを導入した話</description>
+    </item>
+    
+  </channel>
+</rss>
