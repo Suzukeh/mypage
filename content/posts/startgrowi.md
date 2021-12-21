@@ -87,6 +87,8 @@ Wikiを導入した一番の利点は、今まで関わっていなかった班(
 <br>
 明日はbokuroroさんの記事です。もう完成してるようなので安心して全裸待機できますね。
 
+**【更新】** 20日目 [数式処理ソフトのすすめ](https://bokuroro.hatenablog.com/entry/HowToMaxima)
+
 
 
 [^2]:LaTeXやHTMLの仲間。めっちゃ簡単に書ける。GitHubのREADMEとかQiitaとかで採用されている。
