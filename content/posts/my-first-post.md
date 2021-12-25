@@ -10,3 +10,5 @@ tags: ["test"]
 わーい `Y.wav`
 
 ## よかったね
+
+<img src="/posts/test/2022newyearcard.png" style="width: 0%; border: none; box-shadow:none;transform:rotate(0deg)"/>
