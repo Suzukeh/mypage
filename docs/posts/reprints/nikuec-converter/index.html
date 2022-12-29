@@ -11,7 +11,7 @@
 <meta name="author" content="suzuke">
 <link rel="canonical" href="https://www.suzuke.dev/posts/reprints/nikuec-converter/" />
 <link crossorigin="anonymous" href="https://www.suzuke.dev/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="https://www.suzuke.dev/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<script defer crossorigin="anonymous" src="https://www.suzuke.dev/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.suzuke.dev/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.suzuke.dev/favicon-16x16.png">
@@ -106,7 +106,7 @@
   "keywords": [
     "UEC Advent Calendar"
   ],
-  "articleBody": "これは自分のGitHub Wikiから持ってきただけの記事です\n誰でもカンタン！ クソコラ拡張機能の作り方　 【Chromeウェブストアで公開されました！ 12/17追記】 本記事はUEC Advent Calendar 2020の9日目の記事です。\n前日はニー子くんのカクテルの記事です．まだ18歳の人もいるんですよ！！！\n明日はCra2yPierr0tさんです．予告がすでに強そう． 追記：こちらです．自宅で簡単☆計算加速装置\n誰？ 20生のSuzukeです．ネタっぽいこと以上はできない程度の技術と，ネタにしないと気がすまない残念さを足し合わせたような人間です．\nところで，予定と大きく異なってますね．ちょっとまだ完成してないので別の機会にということでお願いします．\nちなみに結論はこれです．\nイントロ Chrome拡張機能とは そもそも拡張機能ってなんじゃい！という方のためにサクッと説明すると，\n ブラウザに新機能を追加し、ブラウザ環境をパーソナライズできる簡易プログラムです。\n だそうです．「Chrome 拡張機能」で検索したときのChromeウェブストアのディスクリプションに書いてありました．\nほんとうにつくれるの？ コンリテを履修した任意のあなたなら作れます．拡張機能に必要な最低限の内容は\n manifest.jsonとかいう中身はただのテキストベースの設定ファイル chaos.jsみたいな，適当な動作をするJavaScriptのファイル  こんなもんです．まあ実質マニフェストなんてCSSみたいなもんですし(ホントか？)，JavaScriptはコンリテでちょっとやりましたよね．\nもちろんコンリテ履修しただけでは全てを書くことはできません．人生でって書いたの3回ぐらいって人は，いわゆるコピペプログラミングってやつになるでしょう．\n私もそうなりました．\nあなたもそうなりましょう．\nクソコラ拡張機能の作り方 ネタを用意する ある程度鮮度はあったほうがいいかと思いますが，それはこの際置いときましょう．未だに5000兆円コンバーター入れてる私みたいな人間もいますから．とにかくネタを用意してください．\n今回私が用意したのはNIKUECです．MIKUEC2020(ファンメイドミクライブ)においてMCのネタとして登場したパワーワード，それがNIKUECです．\nみく ≒ にく = 焼き肉　！！！MCで焼き肉やるか！！！\nということで，ここからは今回私が制作した「NIKUECコンバーター」を例にとって話していきます．\n機能を考える なにはともあれ，MIKUECのページを眺めてみましょう．\nほうほう．\nこれをNIKUECでイジるにはどうするか，と考えるわけです．先程言及した5000兆円コンバーターですが，これはページの中の「5000兆円」などをいい感じに例のフォントの画像で置き換えてくれる素敵な拡張機能です．これを参考にすれば答えは自ずと見えてきます．\nつまり，ページの内容を\n MIKUEC → NIKUEC ライブ　→ 焼き肉  と置換するわけです．画像のもとの文を見てください．次に，置換した結果を想像しながら読んでみてください．\nめっちゃ面白いですね(圧 Tips: 文字数は揃えたほうが良いでしょう．\n実装の仕方を考える これを実装することを考えていきましょう．まあ置換なんて簡単にかけますよね．私はできません．はい，ググりましょう．\nこんなアホみたいな調べ方でも1ページ目に求める答えが出てきます．「2. 実践編～」ってやつです．このサイトによると\n このプログラムを理解するにはいくつかのことを学ぶ必要があります。\n 正規表現による文字列の操作 HTML の操作 (Document Object Model) 関数の再帰的呼び出し   とのことです．まあ作りたいだけなので，サンプルを脳死でコピーしてください．\n改変する部分は当然「正規表現による文字列の操作」です．\nc.textContent = c.textContent.replace(/です。/g, \"でござるよ。\");\nがサンプルにおける置換を担う部分であることは容易にわかります．正規表現もコンリテのEmacsのあたりでやっているはずです．しかしこのサイトは超親切で，\n 2種類以上の書き換えを行う場合には \"ビールもワインも大好きです\".replace(/ビール|麦酒/, \"🍺\").replace(/ワイン/, \"🍷\") のように数珠つなぎに書くことができます。\n と解説してくれています．恐ろしくわかりやすい説明．\nさて，作りたいのは\n MIKUEC → NIKUEC ライブ　→ 焼き肉  という置換でした．つまり，このようにサンプルを改変すればよいわけです．\nc.textContent = c.textContent.replace(/MIKUEC/g, \"NIKUEC\").replace(/ライブ/g, \"焼き肉\");\nこのJavaScriptは保存しておきましょう．後のために適当なディレクトリを作っておくと楽です．\nNIKUEConverter | nikueconverter.js │ 拡張機能にする JavaScriptで実際に置換する部分はできました．あとはこれをchromeくんに 「お前が見ているのは拡張機能だ」 と教えてやる必要があるわけです．それがmanifest.jsonの役割です．これはさすがにコンリテではやってないので，とりまググりましょう．\nいや待ってください．よく見たらさっきのサイトにありました．完璧だなここ．\nこれはフォーマットだけ使う感じで，各所を変更していきます．どの項目が何を示しているかというのは，ほとんど英単語どおりです．\n{ \"manifest_version\": 2, \"description\" : \"Converting the story about MIKUEC into about NIKUEC.\", \"name\": \"NIKUECコンバーター\", \"short_name\": \"NIKUEConv\", \"version\": \"0.2.9\", \"icons\": { \"16\": \"icon16.png\", \"48\": \"icon48.png\", \"128\": \"icon128.png\" }, \"permissions\": [ \"activeTab\" ], \"content_scripts\": [ { \"matches\": [\"\"], \"js\": [\"nikueconverter.js\"] } ] } ただし，\"manifest_version\": 2,だけは変更しないでください．このファイルの更新とか言う意味ではなく，マニフェストのフォーマット自体のバージョンを示しています．バージョンが2じゃないとインストール時に弾かれます．\nこれも先程のディレクトリに保存しときましょう．\nNIKUEConverter | nikueconverter.js | manifest.json アイコン ちらっとmanifest.jsonに出てきましたが，アイコン画像は\n  128*128 px\n  48*48 px\n  16*16 px\n  を用意しました．アイコンは用意しなくても動作に支障はありません．保存先は同じディレクトリにしました．\nNIKUEConverter | nikueconverter.js | manifest.json | icon128.png | icon48.png | icon16.png ちなみに画像はこれです．\nインストールする 12/17追記　Chromeウェブストアで公開されました．より手軽に試せます． NIKUECコンバーター\nさあようやく念願のインストールです．\n  Chrome拡張機能のページ(chrome://extensions/)を開く\n  右上のデベロッパーモードのトグルをオンにする\n  左上の「パッケージ化されていない拡張機能を読み込む」からNIKUEConverterフォルダを選択して読み込む  遊ぶ インストールできたので，“MIKUEC\"等と書いてあるサイト(まさにMIKUECとか)を開くと冒頭の画像のようになります．ちなみに比較するとこんな感じです．\nありえん面白さを体感したい人向けのリンク NIKUECコンバーターの完成品はこちらです．\nNIKUEC-Converter (GitHub)\nまた，こちらの方々のめっちゃありがたい感想が唐突にシュールになるので，がっかり感を得たい人には特におすすめです．\n  ボカロリスナーは今すぐMIKUECを観ろ！！\n  ファンメイドミクライブ「MIKUEC 2020」を見た\n  終わりに 現在Chromeウェブストアの審査待ちです．いずれはストアに並び，もっと手軽に試せるようになると思います．\n審査通ってNIKUECコンバーターはChromeウェブストアから入れられるようになりました．\n！！！！！！！！！！！！！うおおおおおお！！！！！！！！！！！！！\n",
+  "articleBody": "これは自分のGitHub Wikiから持ってきただけの記事です\n誰でもカンタン！ クソコラ拡張機能の作り方　【Chromeウェブストアで公開されました！ 12/17追記】 本記事はUEC Advent Calendar 2020の9日目の記事です。\n前日はニー子くんのカクテルの記事です．まだ18歳の人もいるんですよ！！！\n明日はCra2yPierr0tさんです．予告がすでに強そう． 追記：こちらです．自宅で簡単☆計算加速装置\n誰？ 20生のSuzukeです．ネタっぽいこと以上はできない程度の技術と，ネタにしないと気がすまない残念さを足し合わせたような人間です．\nところで，予定と大きく異なってますね．ちょっとまだ完成してないので別の機会にということでお願いします．\nちなみに結論はこれです．\nイントロ Chrome拡張機能とは そもそも拡張機能ってなんじゃい！という方のためにサクッと説明すると，\nブラウザに新機能を追加し、ブラウザ環境をパーソナライズできる簡易プログラムです。\nだそうです．「Chrome 拡張機能」で検索したときのChromeウェブストアのディスクリプションに書いてありました．\nほんとうにつくれるの？ コンリテを履修した任意のあなたなら作れます．拡張機能に必要な最低限の内容は\nmanifest.jsonとかいう中身はただのテキストベースの設定ファイル chaos.jsみたいな，適当な動作をするJavaScriptのファイル こんなもんです．まあ実質マニフェストなんてCSSみたいなもんですし(ホントか？)，JavaScriptはコンリテでちょっとやりましたよね．\nもちろんコンリテ履修しただけでは全てを書くことはできません．人生で",
   "wordCount" : "3108",
   "inLanguage": "ja",
   "datePublished": "2021-09-18T22:03:07+09:00",
@@ -359,29 +359,28 @@
 <p>JavaScriptで実際に置換する部分はできました．あとはこれをchromeくんに <strong>「お前が見ているのは拡張機能だ」</strong> と教えてやる必要があるわけです．それが<code>manifest.json</code>の役割です．これはさすがにコンリテではやってないので，とりまググりましょう．</p>
 <p>いや待ってください．よく見たら<a href="http://www2.kobe-u.ac.jp/~tnishida/programming/ChromeExtension-02.html#tutorial"  target="_blank" >さっきのサイト</a>にありました．完璧だなここ．</p>
 <p>これはフォーマットだけ使う感じで，各所を変更していきます．どの項目が何を示しているかというのは，ほとんど英単語どおりです．</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-	<span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">2</span>,
-	<span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Converting the story about MIKUEC into about NIKUEC.&#34;</span>,
-	<span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;NIKUECコンバーター&#34;</span>,
-	<span style="color:#f92672">&#34;short_name&#34;</span>: <span style="color:#e6db74">&#34;NIKUEConv&#34;</span>,
-	<span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.9&#34;</span>,
-	<span style="color:#f92672">&#34;icons&#34;</span>: {
-	    <span style="color:#f92672">&#34;16&#34;</span>: <span style="color:#e6db74">&#34;icon16.png&#34;</span>,
-	    <span style="color:#f92672">&#34;48&#34;</span>: <span style="color:#e6db74">&#34;icon48.png&#34;</span>,
-	    <span style="color:#f92672">&#34;128&#34;</span>: <span style="color:#e6db74">&#34;icon128.png&#34;</span>
-	},
-	<span style="color:#f92672">&#34;permissions&#34;</span>: [
-		    <span style="color:#e6db74">&#34;activeTab&#34;</span>
-	],
-	<span style="color:#f92672">&#34;content_scripts&#34;</span>: [
-		{
-		    <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;&lt;all_urls&gt;&#34;</span>],
-		    <span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;nikueconverter.js&#34;</span>]
-		}
-	]
-}
-
-</code></pre></div><p>ただし，<code>&quot;manifest_version&quot;: 2,</code>だけは変更しないでください．このファイルの更新とか言う意味ではなく，マニフェストのフォーマット自体のバージョンを示しています．バージョンが2じゃないとインストール時に弾かれます．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Converting the story about MIKUEC into about NIKUEC.&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;NIKUECコンバーター&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;short_name&#34;</span>: <span style="color:#e6db74">&#34;NIKUEConv&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.9&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;icons&#34;</span>: {
+</span></span><span style="display:flex;"><span>	    <span style="color:#f92672">&#34;16&#34;</span>: <span style="color:#e6db74">&#34;icon16.png&#34;</span>,
+</span></span><span style="display:flex;"><span>	    <span style="color:#f92672">&#34;48&#34;</span>: <span style="color:#e6db74">&#34;icon48.png&#34;</span>,
+</span></span><span style="display:flex;"><span>	    <span style="color:#f92672">&#34;128&#34;</span>: <span style="color:#e6db74">&#34;icon128.png&#34;</span>
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;permissions&#34;</span>: [
+</span></span><span style="display:flex;"><span>		    <span style="color:#e6db74">&#34;activeTab&#34;</span>
+</span></span><span style="display:flex;"><span>	],
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;content_scripts&#34;</span>: [
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;&lt;all_urls&gt;&#34;</span>],
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;nikueconverter.js&#34;</span>]
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>ただし，<code>&quot;manifest_version&quot;: 2,</code>だけは変更しないでください．このファイルの更新とか言う意味ではなく，マニフェストのフォーマット自体のバージョンを示しています．バージョンが2じゃないとインストール時に弾かれます．</p>
 <p>これも先程のディレクトリに保存しときましょう．</p>
 <pre tabindex="0"><code>NIKUEConverter
 | nikueconverter.js

@@ -11,7 +11,7 @@
 <meta name="author" content="suzuke">
 <link rel="canonical" href="https://www.suzuke.dev/posts/startgrowi/" />
 <link crossorigin="anonymous" href="https://www.suzuke.dev/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="https://www.suzuke.dev/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<script defer crossorigin="anonymous" src="https://www.suzuke.dev/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.suzuke.dev/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.suzuke.dev/favicon-16x16.png">
@@ -100,7 +100,7 @@
   "keywords": [
     "UEC Advent Calendar"
   ],
-  "articleBody": "はじめに この記事はUEC Advent Calendar 2021の19日目(12/19)の記事です。\n前日はごっちさんのおうちサーバーでサーバーレスです。1\nVSCode拡張機能のおすすめになぜか出てくるKubernetesがなんなのかようやくわかりました。\nさて、皆さんはWikiというものをご存知だと思います。知らない人のために、とあるクソデカWikiに書いてあったWikiについての説明を引用します。\n ウィキ（Wiki）とは、不特定多数のユーザーが共同してウェブブラウザから直接コンテンツを編集するウェブサイトである。 Wikipedia\n Wikiを説明するWikiって、なんか再帰っぽい感じがしますね。\nWikiは「みんなで情報を共有・蓄積するためのツール」として広く使われているわけですが、実際に自分で開設したくなったらどうやればできるのでしょうか？ ということで、この記事ではGROWIを使って部内Wikiを開設したという話をしていきたいと思います。\nだれ 鈴木です。\nこの世界、この電通大、この20生には大勢の鈴木がいるのでSuzukeを名乗って差別化を図っています。\n背景 私の所属しているバーチャルライブ研究会(VLL)とかいうサークルは起源が2017年の新興です。2019年に公認を得たりなどして異常なスピードで規模が拡大していますが、組織のインフラが追いついていない部分もそこそこあります(オブラート)。その改善の一環として本格的に部内Wikiについて検討し、7月ごろに導入に至りました。\n調べて見つけたGROWIは導入に必要な作業のほとんど全てが私にとって未知だったので、めっちゃ基本的なことから調べまくってなんとかGCEインスタンスが再起不能になるところまで頑張りました。それ以上は無理だと思い、部内のつよつよな先輩になんとかしてもらって導入を完遂しました。\nGROWIとは GROWI\nMarkdown2で書けるWikiのソフトウェアで、Crowiのフォークのようです。WESEEK社によって開発されていますがGitHubに出ているOSSです。サーバー等を用意できれば無料で使うことができます。\nサーバーらへんも用意してくれる有料プランもありますが、完全に企業向けです。学生はおとなしく自分で立てましょう。\n選んだ理由  Markdownで書ける 新しくてメンテされてそう ドキュメントに立て方がほぼ全部書いてある 見た目がかっこいい  \n(公式デモページ) 雑な作り方 基本的に、GCE環境でGrowiのドキュメントに則って作業すればできます。つまり、Googleアカウントさえあればできます。\n GCPでCompute EngineのVMインスタンスを起動 GitHubからDocker Composeのファイルを持ってくる\ngit clone https://github.com/weseek/growi-docker-compose.git growi docker-compose up でGROWIを起動 http://localhost:3000/にアクセスしたら初期登録画面が出る！  (初期登録画面の例) 導入してどうだったか ようやくVLLにドキュメントをまとめるところができました。 これだけでもすごい変化です。少しづつ記事が増えていますが、もっと速いペースで書いてもらわないと引き継ぎ終わらないよの気持ちで3年生を見ています。頑張って下さい。\nWikiを導入した一番の利点は、今まで関わっていなかった班(VLLではタスクを班で分けています)のドキュメントを探しやすくなったことだと思います。今までは各班がそれぞれ設置したGoogleドキュメントなどがありましたが、あとからその仕事に興味を持った人には到達しづらいという問題点がありました。これを解消していくことで、ますます複数の班に所属するのが容易になるでしょう。\nたぶん。\nまとめ 組織にWikiは導入すべきです。せっかく人が集まっているのですから、知識も経験も集めて貯めていきましょう。\nちなみに、一度データをほぼふっ飛ばす大事故をやらかしました。\nバックアップはちゃんと取れ！！！！！！\n明日はbokuroroさんの記事です。もう完成してるようなので安心して全裸待機できますね。 【更新】 20日目 数式処理ソフトのすすめ\n  gottiの記事、ゴチ記事 ↩︎\n LaTeXやHTMLの仲間。めっちゃ簡単に書ける。GitHubのREADMEとかQiitaとかで採用されている。 ↩︎\n   ",
+  "articleBody": "はじめに この記事はUEC Advent Calendar 2021の19日目(12/19)の記事です。\n前日はごっちさんのおうちサーバーでサーバーレスです。1\nVSCode拡張機能のおすすめになぜか出てくるKubernetesがなんなのかようやくわかりました。\nさて、皆さんはWikiというものをご存知だと思います。知らない人のために、とあるクソデカWikiに書いてあったWikiについての説明を引用します。\nウィキ（Wiki）とは、不特定多数のユーザーが共同してウェブブラウザから直接コンテンツを編集するウェブサイトである。 Wikipedia\nWikiを説明するWikiって、なんか再帰っぽい感じがしますね。\nWikiは「みんなで情報を共有・蓄積するためのツール」として広く使われているわけですが、実際に自分で開設したくなったらどうやればできるのでしょうか？ ということで、この記事ではGROWIを使って部内Wikiを開設したという話をしていきたいと思います。\nだれ 鈴木です。\nこの世界、この電通大、この20生には大勢の鈴木がいるのでSuzukeを名乗って差別化を図っています。\n背景 私の所属しているバーチャルライブ研究会(VLL)とかいうサークルは起源が2017年の新興です。2019年に公認を得たりなどして異常なスピードで規模が拡大していますが、組織のインフラが追いついていない部分もそこそこあります(オブラート)。その改善の一環として本格的に部内Wikiについて検討し、7月ごろに導入に至りました。\n調べて見つけたGROWIは導入に必要な作業のほとんど全てが私にとって未知だったので、めっちゃ基本的なことから調べまくってなんとかGCEインスタンスが再起不能になるところまで頑張りました。それ以上は無理だと思い、部内のつよつよな先輩になんとかしてもらって導入を完遂しました。\nGROWIとは GROWI\nMarkdown2で書けるWikiのソフトウェアで、Crowiのフォークのようです。WESEEK社によって開発されていますがGitHubに出ているOSSです。サーバー等を用意できれば無料で使うことができます。\nサーバーらへんも用意してくれる有料プランもありますが、完全に企業向けです。学生はおとなしく自分で立てましょう。\n選んだ理由 Markdownで書ける 新しくてメンテされてそう ドキュメントに立て方がほぼ全部書いてある 見た目がかっこいい (公式デモページ) 雑な作り方 基本的に、GCE環境でGrowiのドキュメントに則って作業すればできます。つまり、Googleアカウントさえあればできます。\nGCPでCompute EngineのVMインスタンスを起動 GitHubからDocker Composeのファイルを持ってくる\ngit clone https://github.com/weseek/growi-docker-compose.git growi docker-compose up でGROWIを起動 http://localhost:3000/にアクセスしたら初期登録画面が出る！ (初期登録画面の例) 導入してどうだったか ようやくVLLにドキュメントをまとめるところができました。 これだけでもすごい変化です。少しづつ記事が増えていますが、もっと速いペースで書いてもらわないと引き継ぎ終わらないよの気持ちで3年生を見ています。頑張って下さい。\nWikiを導入した一番の利点は、今まで関わっていなかった班(VLLではタスクを班で分けています)のドキュメントを探しやすくなったことだと思います。今までは各班がそれぞれ設置したGoogleドキュメントなどがありましたが、あとからその仕事に興味を持った人には到達しづらいという問題点がありました。これを解消していくことで、ますます複数の班に所属するのが容易になるでしょう。\nたぶん。\nまとめ 組織にWikiは導入すべきです。せっかく人が集まっているのですから、知識も経験も集めて貯めていきましょう。\nちなみに、一度データをほぼふっ飛ばす大事故をやらかしました。\nバックアップはちゃんと取れ！！！！！！\n明日はbokuroroさんの記事です。もう完成してるようなので安心して全裸待機できますね。 【更新】 20日目 数式処理ソフトのすすめ\ngottiの記事、ゴチ記事 ↩︎\nLaTeXやHTMLの仲間。めっちゃ簡単に書ける。GitHubのREADMEとかQiitaとかで採用されている。 ↩︎\n",
   "wordCount" : "1773",
   "inLanguage": "ja",
   "datePublished": "2021-12-19T00:00:00Z",
@@ -288,17 +288,17 @@ VSCode拡張機能のおすすめになぜか出てくるKubernetesがなんな�
 <br>
 明日はbokuroroさんの記事です。もう完成してるようなので安心して全裸待機できますね。
 <p><strong>【更新】</strong> 20日目 <a href="https://bokuroro.hatenablog.com/entry/HowToMaxima"  target="_blank" >数式処理ソフトのすすめ</a></p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p><small>gottiの記事、ゴチ記事</small>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>LaTeXやHTMLの仲間。めっちゃ簡単に書ける。GitHubのREADMEとかQiitaとかで採用されている。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 
   </div>
